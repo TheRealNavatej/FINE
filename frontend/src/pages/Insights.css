@@ -1,0 +1,277 @@
+.insights-container {
+  padding: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.insights-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.generate-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #7c4dff 0%, #536dfe 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.generate-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(124, 77, 255, 0.4);
+}
+
+.generate-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-loader {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.insights-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.ai-insight-card,
+.mood-analysis-card,
+.tips-card,
+.prompt-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+.card-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.ai-icon {
+  background: linear-gradient(135deg, #7c4dff 0%, #536dfe 100%);
+}
+
+.mood-icon {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+}
+
+.tips-icon {
+  background: linear-gradient(135deg, #00c853 0%, #64dd17 100%);
+}
+
+.ai-insight-content {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.ai-insight-content p {
+  margin-bottom: 16px;
+}
+
+.ai-insight-content p:last-child {
+  margin-bottom: 0;
+}
+
+.prompt-card {
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.prompt-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.prompt-icon {
+  padding: 20px;
+  background: rgba(124, 77, 255, 0.1);
+  border-radius: 20px;
+  color: #7c4dff;
+}
+
+.prompt-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.prompt-content p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 600px;
+  margin: 0;
+}
+
+.insights-features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+  text-align: left;
+}
+
+.insights-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+.insights-features li svg {
+  color: #7c4dff;
+}
+
+.mood-spending-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mood-item {
+  display: grid;
+  grid-template-columns: 140px 1fr 100px;
+  align-items: center;
+  gap: 16px;
+}
+
+.mood-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mood-emoji {
+  font-size: 28px;
+}
+
+.mood-name {
+  font-weight: 600;
+  color: white;
+  font-size: 15px;
+}
+
+.mood-bar-container {
+  height: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.mood-bar {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.5s ease;
+}
+
+.mood-amount {
+  font-weight: 700;
+  color: white;
+  text-align: right;
+  font-size: 16px;
+}
+
+.tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tip-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tip-number {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  background: linear-gradient(135deg, #7c4dff 0%, #536dfe 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: white;
+  font-size: 16px;
+}
+
+.tip-content h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  margin: 0 0 8px 0;
+}
+
+.tip-content p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .insights-container {
+    padding: 20px;
+  }
+
+  .mood-item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .mood-amount {
+    text-align: left;
+  }
+
+  .prompt-card {
+    padding: 40px 20px;
+  }
+}
